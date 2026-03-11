@@ -1,0 +1,78 @@
+Title
+
+Single-Cell RNA-seq Analysis of Human Pancreatic Cells
+Abstract
+
+Single-cell RNA sequencing enables the study of gene expression at the resolution of individual cells. In this project, we analyzed a pancreatic single-cell dataset to identify transcriptionally distinct cell populations and explore gene expression variability across pancreatic cell types. Using the Seurat framework, we performed quality control filtering, normalization, dimensionality reduction, clustering, and visualization. The analysis revealed distinct clusters corresponding to known pancreatic cell types, demonstrating the effectiveness of single-cell transcriptomics for cell type identification and biological discovery.
+
+Introduction
+
+Single-cell RNA sequencing (scRNA-seq) has revolutionized biological research by enabling transcriptomic analysis at the individual cell level. Traditional bulk RNA sequencing averages gene expression across many cells, masking cellular heterogeneity. In contrast, scRNA-seq reveals differences in gene expression between individual cells.
+
+The pancreas contains multiple specialized cell types involved in endocrine and exocrine functions. Understanding transcriptional differences between these cells is important for studying metabolic regulation and diseases such as diabetes.
+
+The goal of this study was to analyze pancreatic scRNA-seq data and identify transcriptionally distinct cell populations using computational analysis.
+
+Methods
+Dataset
+
+The dataset used in this study was the panc8 pancreatic single-cell dataset provided by the SeuratData package.
+
+Quality Control
+
+Cells were filtered to remove low-quality or damaged cells based on gene counts and mitochondrial gene percentage.
+
+Normalization
+
+Gene expression counts were normalized using log normalization to correct for sequencing depth differences between cells.
+
+Feature Selection
+
+Highly variable genes were identified to capture genes contributing most strongly to biological variation.
+
+Dimensionality Reduction
+
+Principal Component Analysis (PCA) was used to reduce the dimensionality of the gene expression matrix.
+
+Clustering
+
+Cells were clustered using a graph-based community detection algorithm to identify groups of transcriptionally similar cells.
+
+Visualization
+
+UMAP was used to visualize high-dimensional gene expression data in two dimensions.
+
+Results
+Variable Gene Identification
+
+Highly variable genes showed large differences in expression across cells and were used for downstream analysis.
+
+(Insert variable gene plot)
+
+PCA Analysis
+
+Principal component analysis identified major axes of variation in the dataset.
+
+(Insert elbow plot)
+
+Clustering
+
+Graph-based clustering identified 18 transcriptionally distinct clusters.
+
+UMAP Visualization
+
+UMAP projection revealed clear separation of pancreatic cell populations.
+
+(Insert UMAP cluster figure)
+
+Clusters corresponded closely with known pancreatic cell types.
+
+Discussion
+
+The analysis successfully identified transcriptionally distinct pancreatic cell populations. Clustering results aligned with known biological cell types, demonstrating the effectiveness of single-cell RNA-seq analysis for identifying cellular heterogeneity.
+
+The presence of highly variable genes suggests important transcriptional differences between pancreatic cell populations.
+
+Conclusion
+
+This project demonstrates a complete workflow for analyzing single-cell RNA sequencing data. Using Seurat, we identified pancreatic cell populations and explored gene expression variability across thousands of cells. The results highlight the power of single-cell transcriptomics for understanding cellular diversity and biological function.
